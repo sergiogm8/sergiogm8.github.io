@@ -1,0 +1,280 @@
+:root {
+    --background: rgb(37, 59, 63);
+    --background-content: rgb(18, 26, 28);
+    --color-secundario: #87b3b3;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.logo{
+    color:white;
+}
+
+.content {
+    height: auto;
+    width: auto;
+}
+
+/* navigation styles start here */
+
+header {
+    background: var(--background-content);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 80px;
+}
+
+/* changed this from the tutorial video to
+     allow it to gain focus, making it tabbable */
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.nav-toggle:focus~.nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    padding-top: 15px;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: #d2d2d2;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.logo{
+    margin-top: 1rem;
+}
+
+.introduction{
+    text-align: center;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img{
+    width: 250px;
+    height: 280px;
+    border-radius: 50%;
+}
+
+.home-section{
+    width: 100%;
+    height: 100vh;
+    background: var(--background-content);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.large-text{
+    font-size: 32px;
+    color: white;
+}
+
+.large-text #nombre{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+#saludo{
+    color: var(--color-secundario);
+    margin: 20px;
+}
+
+.small-text{
+    color: white;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.about-section {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-secundario);
+    color: white;
+}
+
+@media screen and (min-width: 900px) {
+    .small-text{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .small-text span{
+        border-left: 2px solid var(--color-secundario);
+        /* border-right: 2px solid white;  */
+    }
+
+}
+@media screen and (min-width: 800px) {
+    
+    .large-text #nombre{
+        font-size: 36px;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        position: fixed;
+    }
+
+    .logo {
+        position: relative;
+        margin-right: 50px;
+        cursor: pointer;
+        margin-top: 0;
+    }
+
+    nav {
+        /* Edge support */
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1, 1);
+        background: none;
+        top: initial;
+        left: initial;
+        /* end Edge support stuff */
+
+        /* grid-column: 3 / 4; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 0;
+        /* margin-right: 50px; */
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 3px;
+        background: #7dc8d7;
+        position: absolute;
+        top: 1.5em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 200ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+}
