@@ -147,10 +147,10 @@ nav a:hover {
     align-items: center;
 }
 
-.img-container img{
-    width: 250px;
-    height: 280px;
-    border-radius: 50%;
+.img-perfil-container img{
+    width: 270px;
+    height: 300px;
+    border-radius: 50px;
 }
 
 .home-section{
@@ -186,27 +186,88 @@ nav a:hover {
     text-transform: uppercase;
 }
 
+.small-text .home-description{
+    margin-top: 5px;
+}
+
 .about-section {
     height: 100vh;
     width: 100%;
-    background: var(--color-secundario);
+    background: #e5e5e5;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.about-card{
+    /* height: 500px; */
+    /* width: 800px; */
+    background: white;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 5px;
+    color: black;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    /* padding-right: 50px;
+    padding-left: 50px; */
+}
+
+/* .about-card img{
+    height: 300px;
+    width: 200px;
+} */
+
 @media screen and (min-width: 900px) {
-    .small-text{
+    
+    .about-card-header{
+        text-align: center;
+    }
+
+    .about-card{
+        height: 35rem;
+        width: 75rem;
+        display: block;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .about-card-container{
+        margin-top: 20px;
         display: flex;
         justify-content: space-evenly;
     }
 
+    .about-card img{
+        height: 25em;
+        width: 18em;
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+    }
+
+    .about-me{
+        align-self: center;
+        text-align: justify;
+        width: 25em;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    
+    .small-text{
+        display: flex;
+        justify-content: center;
+    }
+
     .small-text span{
         border-left: 2px solid var(--color-secundario);
+        margin-left: 15px;
+        margin-right: 15px;
         /* border-right: 2px solid white;  */
     }
 
-}
-@media screen and (min-width: 800px) {
-    
     .large-text #nombre{
         font-size: 36px;
     }
