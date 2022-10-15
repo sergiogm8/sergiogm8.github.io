@@ -1,7 +1,7 @@
 :root {
     --background: rgb(37, 59, 63);
     --background-content: rgb(18, 26, 28);
-    --color-secundario: #87b3b3;
+    --color-secundario: #87b3b3; 
 }
 
 *,
@@ -36,8 +36,8 @@ body {
 header {
     background: var(--background-content);
     text-align: center;
-    position: fixed;
-    z-index: 999;
+    /* position: fixed; */
+    /* z-index: 999; */
     width: 100%;
     height: 80px;
 }
@@ -151,9 +151,10 @@ nav a:hover {
     width: 270px;
     height: 300px;
     border-radius: 50px;
+    border: 7px solid var(--color-secundario);
 }
 
-.home-section{
+.primary-section{
     width: 100%;
     height: 100vh;
     background: var(--background-content);
@@ -190,28 +191,46 @@ nav a:hover {
     margin-top: 5px;
 }
 
-.about-section {
+.secondary-section {
     height: 100vh;
     width: 100%;
-    background: #e5e5e5;
-    color: white;
+    background: #d2e4eb;
+    /* color: white; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .about-card{
-    /* height: 500px; */
-    /* width: 800px; */
-    background: white;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 5px;
+    height: 100%;
+    width: 100%;
+    background: #d2e4eb;
+    /* border-radius: 50px; */
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 5px 5px;
     color: black;
-    justify-content: center;
+    display: block;
+    /* justify-content: center; */
+    /* align-items: center; */
     padding-top: 35px;
     padding-bottom: 35px;
     /* padding-right: 50px;
     padding-left: 50px; */
+}
+
+.about-card .img-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-card img{
+    /* display: flex;
+    justify-content: center; */
+    height: 17em;
+    width: 13em;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
 }
 
 /* .about-card img{
@@ -223,27 +242,21 @@ nav a:hover {
     
     .about-card-header{
         text-align: center;
+        margin-bottom: 15px;
     }
 
     .about-card{
         height: 35rem;
         width: 75rem;
-        display: block;
-        /* justify-content: center;
-        align-items: center; */
-    }
-
-    .about-card-container{
-        margin-top: 20px;
         display: flex;
+        border: 5px solid var(--background);
         justify-content: space-evenly;
+        align-items: center;
     }
 
     .about-card img{
-        height: 25em;
-        width: 18em;
-        border-radius: 25px;
-        box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+        height: 27em;
+        width: 20em;
     }
 
     .about-me{
@@ -251,6 +264,7 @@ nav a:hover {
         text-align: justify;
         width: 25em;
         font-size: 20px;
+        font-weight: 300;
     }
 }
 
@@ -279,7 +293,7 @@ nav a:hover {
     header {
         display: flex;
         align-items: center;
-        position: fixed;
+        /* position: fixed; */
     }
 
     .logo {
@@ -338,4 +352,8 @@ nav a:hover {
     nav a:hover::before {
         transform: scale(1, 1);
     }
+}
+
+html{
+    scroll-behavior: smooth;
 }
