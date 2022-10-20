@@ -226,6 +226,10 @@ nav a:hover {
     margin-top: 5px;
 }
 
+.about-section{
+    height: 190vh;
+}
+
 .about-card{
     height: 100%;
     width: 100%;
@@ -270,10 +274,132 @@ nav a:hover {
     margin-top: 10px;
 }
 
+.aptitud-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.grid-element{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aptitud{
+    background: #3b5b8a;
+    border-radius: 10px;
+    color: #FAFAFA;
+    padding: 15px;
+}
+
+.aptitud .emoji {
+    font-size: 2rem;
+}
+
+.aptitud h3{
+    margin-bottom: 5px;
+}
+
 /* .about-card img{
     height: 300px;
     width: 200px;
 } */
+
+.top-section{
+    height: 150vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 80px;
+}
+
+.formacion-wrapper{
+    display: block;
+    justify-content: center;
+    width: 100%;
+}
+
+.formacion-text{
+    display: block;
+    text-align: center;
+    height: fit-content;
+}
+
+.formacion-text h1{
+    font-size: 36px;
+}
+
+.formacion-text p{
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+.formacion-container{
+    margin-top: 50px;
+}
+
+.educacion, .exp-laboral{
+    width: 100%;
+    padding: 30px;
+}
+
+.educacion h1{
+    text-align: center;
+}
+
+.exp-laboral h1{
+    text-align: center;
+}
+
+.timeline{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.outer {
+    border-left: 2px solid #333;
+    width: 500px;
+}
+
+/* Card container */
+.card {
+    position: relative;
+    margin: 0 0 20px 20px;
+    padding: 10px;
+    /* background: transparent; */
+    color: white;
+    max-width: 500px;
+}
+
+/* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Title of the card */
+.title {
+    color: var(--color-secundario);
+    position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--color-secundario);
+    border-radius: 999px;
+    left: -41px;
+    /* border: 3px solid var(--color-secundario); */
+}
 
 @media screen and (min-width: 1000px) {
     
@@ -322,29 +448,6 @@ nav a:hover {
         padding-left: 50px;
         padding-right: 50px;
     }
-
-    .grid-element{
-        display: block;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .aptitud{
-        background: #3b5b8a;
-        border-radius: 10px;
-        color: #FAFAFA;
-        padding: 15px;
-    }
-
-    .aptitud .emoji {
-        font-size: 2rem;
-    }
-
-    .aptitud h3{
-        margin-bottom: 5px;
-    }
-
 }
 
 @media screen and (min-width: 800px) {
