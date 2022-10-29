@@ -145,11 +145,12 @@ nav a:hover {
     display: block;
     justify-content: center;
     align-items: center;
+    height: auto;
 }
 
 .img-perfil-container img{
-    width: 270px;
-    height: 300px;
+    max-width: 270px;
+    max-height: 300px;
     border-radius: 50px;
     border: 7px solid var(--color-secundario);
 }
@@ -224,6 +225,28 @@ nav a:hover {
 
 .small-text .home-description{
     margin-top: 5px;
+}
+
+.btn-cv{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;
+    text-decoration: none;
+    width: 230px;
+    height: 70px;
+    border-radius: 20px;
+    background: #425959;
+    transition: .3s all;
+    /* background-color: var(--color-secundario); */
+}
+
+.btn-cv:hover{
+    background: var(--color-secundario);
+    transition: .3s all;
 }
 
 .about-section{
@@ -534,7 +557,7 @@ nav a:hover {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
     
     .small-text{
         display: flex;
@@ -559,7 +582,7 @@ nav a:hover {
     header {
         display: flex;
         align-items: center;
-        /* position: fixed; */
+        /* position: initial; */
     }
 
     .logo {
