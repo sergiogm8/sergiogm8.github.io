@@ -512,10 +512,10 @@ nav a:hover {
     max-width: 50px !important;
 }
 
-/* .conocimientos-grid {
-    margin-left: -25px;
-    margin-right: -25px;
-} */
+.conocimientos-grid {
+    margin-left: -20px;
+    margin-right: -20px;
+}
 
 .portfolio {
     color: black;
@@ -525,7 +525,7 @@ nav a:hover {
     margin-top: 30px;
     margin-bottom: 20px;
     height: 100%;
-    padding: 5px;
+    /* padding: 5px; */
     width: 100%;
 }
 
@@ -608,15 +608,7 @@ nav a:hover {
 }
 
 @media screen and (min-width: 1000px) {
-    
-    .conocimientos-grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        margin-top: 25px;
-        /* padding-left: 50px;
-        padding-right: 50px; */
-    }
+
 
     .about-section{
         height: auto;
@@ -672,6 +664,15 @@ nav a:hover {
 
 @media screen and (min-width: 900px) {
     
+    .conocimientos-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 25px;
+        /* padding-left: 50px;
+        padding-right: 50px; */
+    }
+
     .small-text{
         display: flex;
         justify-content: center;
@@ -767,6 +768,11 @@ nav a:hover {
     .img-horizontal {
         max-width: 120px !important;
         max-height: 120px !important;
+    }
+
+    .conocimientos-grid {
+        margin-left: inherit;
+        margin-right: inherit;
     }
 }
 
