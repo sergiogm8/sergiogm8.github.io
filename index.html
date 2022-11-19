@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sergio Garrido Merino</title>
   <meta author="Sergio Garrido Merino">
+  <meta name="description" content="Me llamo Sergio Garrido. Soy Ingeniero Informático y me gustaría trabajar como desarrollador Web Full-Stack o Desarrollador Móvil.">
+  <meta name="keywords" content="SGM, Sergio Garrido, Sergio Garrido Merino, ingenierom, informático, desarrollador full-stack, desarrollador android, microservicios, web, pagina web">
 
+  <link rel="icon" href="imgs/favicon.jpg">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +24,12 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Font Awesome, iconos RRSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -36,9 +45,7 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-    <a>
-      <h1 class="logo">SGM</h1>
-    </a>
+    <a href="#home" class="logo">SGM</a>
     <label for="nav-toggle" class="nav-toggle-label">
       <span></span>
     </label>
@@ -53,15 +60,15 @@
         </div>
         <div class="large-text">
           <div class="saludo">
-            <h1> > </h1>
+            <strong> > </strong>
             <span>¡Hola, mundo!</span>
           </div>
           <h1 id="nombre">Soy Sergio Garrido Merino</h1>
         </div>
         <div class="small-text">
-          <p class="home-description">Ingeniero Informático</p>
+          <h2 class="home-description">Ingeniero Informático</h2>
           <span></span>
-          <p class="home-description">Desarrollador Full-Stack</p>
+          <h2 class="home-description">Desarrollador Full-Stack</h2>
         </div>
         <a href="resources/CV_Sergio-Garrido.pdf" download="CV_Sergio-Garrido.pdf" class="btn-cv">
           Descargar CV
@@ -305,21 +312,65 @@
       </div>
     </section>
 
-    <section class="section primary-section" id="contacto">
-      <div class="contacto-wrapper">
-        <div class="contacto-text">
+    <section class="section primary-section top-section" id="contacto">
+      <div class="vertical-wrapper">
+        <div class="header-text">
           <h1>Contacto</h1>
           <p>Si quieres contactar conmigo, puedes hacerlo a través de cualquiera de las siguientes vías</p>
         </div>
         <div class="contacto-container">
           <div class="contacto-item">
-            <h1>Correo electrónico</h1>
+            <span class="material-icons">person</span>
+            <div class="column">
+              <div class="contacto-title">Nombre</div>
+              <div class="contacto-subtitle">Sergio Garrido Merino</div>
+            </div>
           </div>
-          
+          <div class="contacto-item">
+            <span class="material-icons">email</span>
+            <div class="column">
+              <div class="contacto-title">Correo electrónico</div>
+              <div class="contacto-subtitle"><a href="mailto:sergarridom8@gmail.com">sergarridom8@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contacto-item">
+            <span class="material-icons">phone</span>
+            <div class="column">
+              <div class="contacto-title">Número de teléfono</div>
+              <div class="contacto-subtitle"><a href="tel:+34681216200">+34 681216200</a></div>
+            </div>
+          </div>
+
+          <div class="contacto-item">
+            <span class="material-icons">place</span>
+            <div class="column">
+              <div class="contacto-title">Localidad</div>
+              <div class="contacto-subtitle">Puertollano, Castilla-La Mancha, España</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="redes-sociales">
+          <ul class="wrapper">
+            <li class="icon github">
+              <span class="tooltip">Linkedin</span>
+              <span><i class="fa fa-linkedin"></i></span>
+            </li>
+            <li class="icon github">
+              <span class="tooltip">Github</span>
+              <span><i class="fa fa-github"></i></span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
   </div>
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p>© Sergio Garrido Merino</p>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
